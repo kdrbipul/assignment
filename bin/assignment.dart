@@ -42,17 +42,47 @@ Student(this.studentID, this.grade, String name, int age,
     print("Role: Student");
   }
 
-  /*void avg(){
-    int average = 0;
+  void avg(){
+    // double average = 0;
     double sum = 0;
     // int i = 0;
 
-    if( courseScores[i] = 0; i <courseScores.length; i++){
+    for( int i = 0; i <courseScores.length; i++){
       sum += courseScores[i];
     }
-    sum = sum/courseScores.length;
-    print(sum);
-  }*/
+    double average = sum/courseScores.length;
+    print("Average Score: $average");
+  }
+}
+
+
+class Teacher extends Person{
+
+  // create a attributes class name of "Student"
+  int teacherID = 34556;
+
+  List <String> courseScores = ['Math','Bangla','English'];
+
+//   create a constructor class name of Student
+  Teacher(this.teacherID, String name, int age,
+      String address) : super(name, age,address);
+
+  @override
+  void displayRole() {
+    print("Role: Teacher");
+  }
+
+  void avg(){
+    // double average = 0;
+    double sum = 0;
+    // int i = 0;
+
+    for( int i = 0; i <courseScores.length; i++){
+      // print("Course Taught:");
+      print(courseScores[i]);
+    }
+
+  }
 }
 
 void main() {
@@ -72,5 +102,14 @@ void main() {
   print("Name: ${studentObj.getName}");
   print("Age: ${studentObj.getAge}");
   print("Address: ${studentObj.getAddress}");
-  // studentObj.avg();
+  studentObj.avg();
+
+  // create a object class name of Teacher
+  Teacher teacherObj = Teacher(34556, "Udit Narayan", 65, "New Delhi");
+  teacherObj.displayRole();
+  print("Name: ${teacherObj.getName}");
+  print("Age: ${teacherObj.getAge}");
+  print("Address: ${teacherObj.getAddress}");
+  print('Coures Taught');
+  teacherObj.avg();
 }
