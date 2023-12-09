@@ -61,7 +61,7 @@ class Teacher extends Person{
   // create a attributes class name of "Student"
   int teacherID = 34556;
 
-  List <String> courseScores = ['Math','Bangla','English'];
+  List <String> courseScores = ['-Math','-Bangla','-English'];
 
 //   create a constructor class name of Student
   Teacher(this.teacherID, String name, int age,
